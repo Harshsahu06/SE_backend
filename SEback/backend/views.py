@@ -8,7 +8,7 @@ from .serializer import hospitaldataserializer,userDataSerializer
 from rest_framework import status
 
 
-# hospital data API working with post and get request
+# hospital data API working with post and get request 
 @api_view(['POST',"GET"])
 def hospitaldata(request):
     if request.method=="GET":
@@ -35,7 +35,7 @@ def hospitaldata(request):
     # return Response(status=status.HTTP_401_UNAUTHORIZED) 
     return Response({"status":"nothing done"})  
     
-# user profile data API working
+# user profile data API working with get ,post ,patch
 @api_view(["GET","POST","PATCH"])
 def userdata(request,pk):
     instance=User.objects.get(pk=pk)

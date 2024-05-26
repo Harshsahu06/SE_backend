@@ -8,7 +8,7 @@ from .serializer import hospitaldataserializer,userDataSerializer
 from rest_framework import status
 
 
-# hospital data API working
+# hospital data API working with post and get request
 @api_view(['POST',"GET"])
 def hospitaldata(request):
     if request.method=="GET":
